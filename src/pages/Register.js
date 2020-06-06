@@ -11,7 +11,7 @@ class Register extends React.Component {
     console.log(username, email, password)
     this.props.register(username, email, password)
     if (this.props.isSuccess) {
-      console.log('success')
+      this.props.history.push('/auth/login')
     } else {
       console.log('sucks')
     }

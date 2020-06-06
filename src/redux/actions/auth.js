@@ -5,7 +5,8 @@ import {
   USER_LOGIN_FAILED,
   USER_REGISTER_REQUEST,
   USER_REGISTER_SUCCESS,
-  USER_REGISTER_FAILED
+  USER_REGISTER_FAILED,
+  USER_LOGOUT_SUCCESS
 } from './types'
 
 
@@ -31,11 +32,22 @@ export const login = (email, password) => {
     try {
       const loginData = { email, password }
       const response = await axios.post(process.env.REACT_APP_BASE_URL + '/auth/login', loginData)
-      console.log(response)
-      dispatch({ type: USER_LOGIN_SUCCESS })
+      console.log('response in login', response)
+      if (response.status === 200) {
+        dispatch({ type: USER_LOGIN_SUCCESS, payload: response.data.token })
+      } else {
+        dispatch({ type: USER_LOGIN_FAILED })
+      }
     } catch(err) {
       console.log('Error in login', err)
       dispatch({ type: USER_LOGIN_FAILED })
     }
+  }
+}
+
+
+export const logout = () => {
+  return async dispatch => {
+    dispatch({ type: USER_LOGOUT_SUCCESS })
   }
 }
