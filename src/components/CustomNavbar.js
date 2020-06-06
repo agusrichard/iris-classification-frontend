@@ -27,6 +27,7 @@ function CustomNavbar(props) {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
             <Link to="/" className="clink">Home</Link>
+            <Link to="/predict" className="clink">Predict</Link>
           </Nav>
           {
             props.isLoggedIn ? 

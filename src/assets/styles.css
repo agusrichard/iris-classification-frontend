@@ -97,6 +97,41 @@
 }
 
 
+/* --------------------------- NAVIGATION  --------------------------- */
+.cnav{
+  background: #b010f0;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+}
+
+.cnav-transparent {
+  position: fixed;
+  width: 100%;
+}
+
+.cnav-brand-icon {
+  margin: 0;
+  padding: 0;
+  width: 45px;
+  height: 45px;
+}
+
+.clink {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #fff;
+  padding: 10px;
+  font-weight: bolder;
+  transition: 0.2s;
+}
+
+.clink:hover {
+  text-decoration: none;
+  color: rgb(43, 43, 43);
+  transition: 0.2s;
+}
+
 
 /* --------------------------- HOME  --------------------------- */
 .home {
@@ -163,38 +198,64 @@
 }
 
 
-/* --------------------------- NAVIGATION  --------------------------- */
-.cnav{
-  background: #b010f0;
-  position: fixed;
+/* --------------------------- PREDICT  --------------------------- */
+.predict-container {
+  height: 100vh;
+  position: relative;
+  background: rgb(235, 233, 233);
+}
+
+.predict {
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+}
+
+.predict-input-container {
+  background: rgba(176, 16, 240, 0.5);
+  width: 50%;
+  padding: 30px 20px;
+  border-radius: 10px;
+}
+
+.predict-output-container {
+  background: rgba(176, 16, 240, 0.5);
+  width: 40%;
+  padding: 30px 20px;
+  border-radius: 10px;
+}
+
+.predict-input {
+  display: block;
+  margin: 20px 0;
+  border-radius: 5px;
   width: 100%;
-}
-
-.cnav-transparent {
-  position: fixed;
-  width: 100%;
-}
-
-.cnav-brand-icon {
-  margin: 0;
-  padding: 0;
-  width: 45px;
-  height: 45px;
-}
-
-.clink {
-  text-decoration: none;
-  font-size: 1.2rem;
-  color: #fff;
   padding: 10px;
-  font-weight: bolder;
+}
+
+.btn-predict {
+  display: block;
+  border: none;
+  background: rgb(223, 12, 195);
+  padding: 10px 20px;
+  color: #fff;
+  border-radius: 10px;
   transition: 0.2s;
 }
 
-.clink:hover {
-  text-decoration: none;
-  color: rgb(43, 43, 43);
+.btn-predict:hover {
+  background: rgb(19, 144, 216);
   transition: 0.2s;
+}
+
+.result-text {
+  color: #fff;
+  font-size: 3rem;
+
 }
 
 
