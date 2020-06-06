@@ -1,5 +1,6 @@
 import { combineReducers } from 'redux'
 import { USER_LOGOUT_SUCCESS } from '../actions/types'
+import authReducer from './auth'
 
 
 const reducers = {

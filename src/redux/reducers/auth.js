@@ -10,6 +10,7 @@ import {
   const initialState = {
     isLoading: false,
     isLoggedIn: false,
+    isSuccess: false,
     loginToken: '',
     errorMessage: ''
   }
@@ -19,37 +20,43 @@ import {
     switch (action.type) {
       case USER_LOGIN_REQUEST: return {
         ...state,
-        isLoading: !state.isLoading
+        isLoading: true,
+        isSuccess: false
       }
   
       case USER_LOGIN_SUCCESS: return {
         ...state,
-        isLoading: !state.isLoading,
+        isLoading: false,
         isLoggedIn: true,
+        isSuccess: true,
         loginToken: action.payload
       }
   
       case USER_LOGIN_FAILED: return {
         ...state,
-        isLoading: !state.isLoading,
+        isLoading: false,
         isLoggedIn: false,
+        isSuccess: false,
         loginToken: '',
         errorMessage: 'Failed to login'
       }
   
       case USER_REGISTER_REQUEST: return {
         ...state,
-        isLoading: !state.isLoading
+        isLoading: true,
+        isSuccess: false
       }
   
       case USER_REGISTER_SUCCESS: return {
         ...state,
-        isLoading: !state.isLoading
+        isLoading: false,
+        isSuccess: true
       }
   
       case USER_REGISTER_FAILED: return {
         ...state,
-        isLoading: !state.isLoading,
+        isLoading: false,
+        isSuccess: false,
         errorMessage: 'Failed to register'
       }
   
