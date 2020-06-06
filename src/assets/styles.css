@@ -14,6 +14,10 @@
   font-family: 'Poppins', sans-serif;
 }
 
+.text-xl {
+  font-size: 2.5rem;
+}
+
 .text-lg {
   font-size: 2rem;
 }
@@ -26,12 +30,20 @@
   font-size: 0.9rem;
 }
 
-.text-color-purple {
+.text-purple {
   color: #b010f0
 }
 
-.text-color-white {
+.text-white {
   color: #fff;
+}
+
+.text-black {
+  color: #000;
+}
+
+.bolder {
+  font-weight: bolder;
 }
 
 
@@ -49,6 +61,10 @@
   display: flex;
   flex-direction: row;
   padding: 100px;
+}
+
+.home-text-container {
+  width: 60%;
 }
 
 .links {
@@ -91,4 +107,20 @@
   text-decoration: none;
   color: rgb(43, 43, 43);
   transition: 0.2s;
+}
+
+
+@media screen and (max-width: 768px) {
+  .text-lg {
+    font-size: 1.5rem;
+  }
+
+  .text-md {
+    font-size: 1rem;
+  }
+
+  .home-text-container {
+    margin: 0;
+    width: 100%;
+  }
 }
