@@ -31,7 +31,7 @@
 }
 
 .text-purple {
-  color: #b010f0
+  color: #b010f0;
 }
 
 .text-white {
@@ -44,6 +44,53 @@
 
 .bolder {
   font-weight: bolder;
+}
+
+.form-title {
+  margin: 20px auto;
+  margin-bottom: 30px;
+  text-align: center;
+  padding: 10px 10px;
+  width: 200px;
+  border-bottom: 4px #b010f0 solid;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.input-text {
+  margin: 10px 5px;
+  padding: 5px 10px;
+  border: 2px #b010f0 solid;
+  border-radius: 5px;
+  width: 250px;
+  transition: 0.2s;
+}
+
+.input-text:hover {
+  border: 2px rgb(84, 23, 252) solid;
+  transition: 0.2s;
+}
+
+.input-text:focus {
+  border: 2px rgb(252, 248, 23) solid;
+  transition: 0.2s;
+}
+
+.btn-submit {
+  display: block;
+  margin: auto;
+  margin-top: 30px;
+  background: #b010f0;
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: #fff;
+  border: none;
+  transition: 0.2s;
+}
+
+.btn-submit:hover {
+  background: rgb(84, 23, 252);
+  transition: 0.2s;
 }
 
 
@@ -75,6 +122,25 @@
 }
 
 
+/* --------------------------- REGISTER  --------------------------- */
+.register {
+  height: 100vh;
+  position: relative;
+  background: #b010f0;
+}
+
+.register div {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  width: 300px;
+  height: 400px;
+  border-radius: 10px;
+}
+
+
 /* --------------------------- NAVIGATION  --------------------------- */
 .cnav{
   background: #b010f0;
@@ -98,7 +164,7 @@
   text-decoration: none;
   font-size: 1.2rem;
   color: #fff;
-  padding: 5px;
+  padding: 10px;
   font-weight: bolder;
   transition: 0.2s;
 }

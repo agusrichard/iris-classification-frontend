@@ -27,7 +27,7 @@ export default function CustomNavbar(props) {
             <Link to="/" className="clink">Home</Link>
           </Nav>
           <Nav className="ml-auto">
-            <Link to="#" className="clink">Register</Link>
+            <Link to="/auth/register" className="clink">Sign Up</Link>
             <Link to="#" className="clink">Login</Link>
           </Nav>
         </Navbar.Collapse>
