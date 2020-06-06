@@ -5,7 +5,8 @@ import {
   Route
 } from 'react-router-dom'
 import Home from './pages/Home'
-import 'materialize-css/dist/css/materialize.min.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import './assets/styles.css'
 
 function App() {
   return (
