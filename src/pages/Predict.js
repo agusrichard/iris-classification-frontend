@@ -1,7 +1,9 @@
 import React from 'react'
+import { connect } from 'react-redux'
 import CustomNavbar from '../components/CustomNavbar'
+import { predict } from '../redux/actions/iris'
 
-export default class Predict extends React.Component {
+class Predict extends React.Component {
   state = {
     sepalLength: '',
     sepalWidth: '',
@@ -16,7 +18,14 @@ export default class Predict extends React.Component {
   }
 
   handleSubmit = (event) => {
-
+    event.preventDefault()
+    const data = {
+      sepal_length: this.state.sepalLength,
+      sepal_width: this.state.sepalWidth,
+      petal_length: this.state.petalLength,
+      petal_width: this.state.petalWidth
+    }
+    this.props.predict(this.props.token, data)
   }
 
   render() {
@@ -37,7 +46,7 @@ export default class Predict extends React.Component {
             </div>
             <div className="predict-output-container">
               <h3 className="text-white mb-5">Result:</h3>
-              <p className="result-text">Here</p>
+              <p className="result-text">{this.props.prediction ? this.props.prediction : 'Here'}</p>
             </div>
           </div>
         </div>
@@ -45,3 +54,10 @@ export default class Predict extends React.Component {
     )
   }
 }
+
+const mapStateToProps = (state) => ({
+  token: state.auth.loginToken,
+  prediction: state.iris.data
+})
+
+export default connect(mapStateToProps, { predict })(Predict)

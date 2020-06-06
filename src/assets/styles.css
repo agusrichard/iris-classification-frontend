@@ -272,4 +272,22 @@
     margin: 0;
     width: 100%;
   }
+
+  .predict-container {
+    height: 140vh;
+  }
+
+  .predict {
+    display: block;
+    margin-top: 50px;
+  }
+
+  .predict-input-container {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .predict-output-container {
+    width: 100%;
+  }
 }

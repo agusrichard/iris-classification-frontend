@@ -1,10 +1,12 @@
 import { combineReducers } from 'redux'
 import { USER_LOGOUT_SUCCESS } from '../actions/types'
 import authReducer from './auth'
+import irisReducer from './iris'
 
 
 const reducers = {
-  auth: authReducer
+  auth: authReducer,
+  iris: irisReducer
 }
 
 const appReducer = combineReducers(reducers)

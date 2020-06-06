@@ -11,3 +11,8 @@ export const USER_REGISTER_FAILED = 'USER_REGISTER_FAILED'
 
 // Logout Constant
 export const USER_LOGOUT_SUCCESS = 'USER_LOGOUT_SUCCESS'
+
+// Iris Make Prediction Constants
+export const PREDICT_REQUEST = 'PREDICT_REQUEST'
+export const PREDICT_SUCCESS = 'PREDICT_SUCCESS'
+export const PREDICT_FAILED = 'PREDICT_FAILED'
