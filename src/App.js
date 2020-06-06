@@ -6,6 +6,7 @@ import {
 } from 'react-router-dom'
 import Home from './pages/Home'
 import Register from './pages/Register'
+import Login from './pages/Login'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './assets/styles.css'
 
@@ -15,6 +16,7 @@ function App() {
       <Switch>
         <Route exact path="/" component={ Home } />
         <Route path="/auth/register" component={ Register } />
+        <Route path="/auth/login" component={ Login } />
       </Switch>
     </BrowserRouter>
   );
